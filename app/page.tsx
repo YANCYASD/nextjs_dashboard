@@ -7,21 +7,17 @@ import Image from 'next/image';
 
 export default function Page() {
   return (
-    <main className="flex min-h-screen flex-col p-1">
+    <main className="flex min-h-screen flex-col">
       <div className="md:h-42 flex h-20 shrink-0 items-end rounded-lg bg-blue-500 p-4">
         <AcmeLogo />
       </div>
       <div className="mt-4 flex grow flex-col gap-4 md:flex-row">
         <div className="flex flex-col justify-center gap-6 rounded-lg bg-gray-50 px-6 py-10 md:w-2/5 md:px-20">
-          <div className={styles.shape} />
           <p
-            className={`${lusitana.className} text-xl text-gray-800 md:text-3xl md:leading-normal`}
+            className={`${lusitana.className} text-xl text-gray-800 md:text-2xl md:leading-normal`}
           >
-            <strong>Welcome to Acme.</strong> This is the example for the{' '}
-            <a href="https://nextjs.org/learn/" className="text-blue-500">
-              Next.js Learn Course
-            </a>
-            , brought to you by Vercel.
+            <strong>Welcome to APP.</strong> This is the example for the
+            <span className="text-blue-500"> PAGE</span>
           </p>
           <Link
             href="/login"
@@ -30,9 +26,19 @@ export default function Page() {
             <span>Log in</span> <ArrowRightIcon className="w-5 md:w-6" />
           </Link>
         </div>
-        <div className="flex items-center justify-center p-6 md:w-3/5 md:px-28 md:py-12">
+        <div className="relative flex items-center justify-center  rounded-lg bg-[url(/dot.png)] bg-[size:auto_12px] p-6 md:w-3/5 md:px-28 md:py-12">
           {/* Add Hero Images Here */}
-          <Image
+          <div
+            className={
+              'via-white-opacity absolute h-full w-full bg-gradient-to-br from-white to-white'
+            }
+          ></div>
+          <span
+            className={`text-center text-xl font-bold ${lusitana.className} bg-gradient-to-r from-blue-500 to-cyan-500 bg-clip-text text-transparent md:text-9xl`}
+          >
+            LOADING YOUR APP
+          </span>
+          {/* <Image
             src={'/hero-desktop.png'}
             width={1000}
             height={760}
@@ -45,7 +51,7 @@ export default function Page() {
             height={620}
             className="block md:hidden"
             alt="Screenshots of the dashboard project showing mobile version"
-          />
+          /> */}
         </div>
       </div>
     </main>
