@@ -26,18 +26,20 @@ export default function Page() {
             <span>Log in</span> <ArrowRightIcon className="w-5 md:w-6" />
           </Link>
         </div>
-        <div className="relative flex items-center justify-center  rounded-lg bg-[url(/dot.png)] bg-[size:auto_12px] p-6 md:w-3/5 md:px-28 md:py-12">
+        <div className="relative flex flex-1 items-center justify-center  rounded-lg p-6 md:w-3/5 md:flex-auto md:bg-[url(/dot.png)] md:bg-[size:auto_12px] md:px-28 md:py-12">
           {/* Add Hero Images Here */}
           <div
             className={
-              'via-white-opacity absolute h-full w-full bg-gradient-to-br from-white to-white'
+              'via-white-opacity absolute hidden h-full w-full bg-gradient-to-br from-white to-white md:flex md:items-center md:justify-center md:p-80'
             }
-          ></div>
-          <span
-            className={`text-center text-xl font-bold ${lusitana.className} bg-gradient-to-r from-blue-500 to-cyan-500 bg-clip-text text-transparent md:text-9xl`}
           >
-            LOADING YOUR APP
-          </span>
+            <span
+              className={`text-center text-xl font-bold ${lusitana.className} bg-gradient-to-r from-blue-500 to-cyan-500 bg-clip-text text-transparent md:text-9xl`}
+            >
+              LOAD YOUR APP
+            </span>
+          </div>
+
           {/* <Image
             src={'/hero-desktop.png'}
             width={1000}
